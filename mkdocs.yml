@@ -1,0 +1,38 @@
+site_name: The Stanford Daily Developer Documentation
+theme:
+  name: 'material'
+  features:
+    - tabs
+  palette:
+    primary: white
+    accent: red
+  logo: ./img/DailyIcon.png
+  favicon: ./img/favicon.ico
+  font:
+    text: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif
+    # code: Ubuntu Mono
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+
+extra_css:
+  - main.css
+
+repo_name: TheStanfordDaily/docs
+repo_url: https://github.com/TheStanfordDaily/docs
+
+nav:
+  - Home:
+      Introduction: index.md
+  - Website:
+      Introduction: website/introduction.md
+      Frontend: website/frontend.md
+      Backend: website/backend.md
+      Data Viz: website/data-viz.md
+  - Mobile App:
+      Introduction: mobile-app/introduction.md
+  - Archives:
+      Introduction: archives/introduction.md
