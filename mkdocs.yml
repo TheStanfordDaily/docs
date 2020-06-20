@@ -1,11 +1,11 @@
 site_name: The Stanford Daily Developer Documentation
 theme:
   name: 'material'
-  features:
-    - tabs
+  # features:
+  #   - tabs
   palette:
     primary: white
-    accent: red
+    accent: blue grey
   logo: ./img/DailyIcon.png
   favicon: ./img/favicon.ico
   font:
@@ -26,13 +26,13 @@ repo_url: https://github.com/TheStanfordDaily/docs
 
 nav:
   - Home:
-      Introduction: index.md
+      Overview: index.md
   - Website:
-      Introduction: website/introduction.md
+      Overview: website/overview.md
       Frontend: website/frontend.md
       Backend: website/backend.md
       Data Viz: website/data-viz.md
   - Mobile App:
-      Introduction: mobile-app/introduction.md
+      Overview: mobile-app/overview.md
   - Archives:
-      Introduction: archives/introduction.md
+      Overview: archives/overview.md
