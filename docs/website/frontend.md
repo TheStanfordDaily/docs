@@ -61,7 +61,7 @@ This caused us to [switch away from using react-disqus](https://github.com/TheSt
 
 ## Deployment
 
-We deploy our site to AWS. Deployment of the website happens automatically to our production website through a [GitHub Actions script](https://github.com/TheStanfordDaily/stanforddaily/blob/master/.github/workflows/deploy.yml).
+We deploy our site to AWS. Deployment of the website happens automatically to our production website through a [GitHub Actions script](https://github.com/TheStanfordDaily/stanforddaily/blob/master/.github/workflows/deploy.yml), whenever new code is pushed to master.
 
 ### Architecture
 
@@ -127,4 +127,10 @@ If you need to regenerate the secrets (in the event of an AWS account compromise
 
 ### Future improvements
 
+#### Staging site
+
 It would be nice to create a staging site at [http://beta.stanforddaily.com](http://beta.stanforddaily.com) where we can automatically deploy the latest changes from master, and then only selectively deploy the branch to production after testing. Right now, we have no testing phase because changes on master are deployed directly to production.
+
+#### Tests
+
+We should also add unit tests / snapshot tests using [Jest](https://jestjs.io/). This will make sure we don't have any unexpected regressions.
