@@ -25,13 +25,14 @@ repo_name: TheStanfordDaily/docs
 repo_url: https://github.com/TheStanfordDaily/docs
 
 nav:
-  - Home:
-      Overview: index.md
+  - Home: index.md
   - Website:
       Overview: website/overview.md
       Frontend: website/frontend.md
       Backend: website/backend.md
       Data Viz: website/data-viz.md
+  - DevOps:
+      DNS: devops/dns.md
   - Mobile App:
       Overview: mobile-app/overview.md
   - Archives:
