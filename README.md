@@ -1,6 +1,6 @@
 # Stanford Daily docs
 
-Stanford Daily developer documentation. Deployed at [http://docs.stanforddaily.com/](http://docs.stanforddaily.com/).
+Stanford Daily developer documentation. Deployed at [https://docs.stanforddaily.com/](https://docs.stanforddaily.com/).
 
 Getting started
 
