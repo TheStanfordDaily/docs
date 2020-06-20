@@ -57,6 +57,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#local-development" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -178,40 +183,10 @@
       
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
-    
-    <label class="md-nav__link" for="nav-1">
-      Home
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Home" data-md-level="1">
-      <label class="md-nav__title" for="nav-1">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Home
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
-    <a href="../.." title="Overview" class="md-nav__link">
-      Overview
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
     
@@ -278,9 +253,129 @@
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Backend
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="./" title="Backend" class="md-nav__link md-nav__link--active">
       Backend
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#local-development" class="md-nav__link">
+    Local development
+  </a>
+  
+    <nav class="md-nav" aria-label="Local development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    Directory structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adstxt" class="md-nav__link">
+    ads.txt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wp-contentthemes" class="md-nav__link">
+    wp-content/themes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wp-contentplugins" class="md-nav__link">
+    wp-content/plugins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    Deployment
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-from-production-to-staging" class="md-nav__link">
+    Copying from production to staging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-deployment" class="md-nav__link">
+    Manual deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secrets" class="md-nav__link">
+    Secrets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-improvements" class="md-nav__link">
+    Future improvements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -312,13 +407,55 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
+      DevOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="DevOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../devops/dns/" title="DNS" class="md-nav__link">
+      DNS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
       Mobile App
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Mobile App" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -351,16 +488,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       Archives
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Archives" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -393,6 +530,125 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#local-development" class="md-nav__link">
+    Local development
+  </a>
+  
+    <nav class="md-nav" aria-label="Local development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    Directory structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adstxt" class="md-nav__link">
+    ads.txt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wp-contentthemes" class="md-nav__link">
+    wp-content/themes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wp-contentplugins" class="md-nav__link">
+    wp-content/plugins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    Deployment
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-from-production-to-staging" class="md-nav__link">
+    Copying from production to staging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-deployment" class="md-nav__link">
+    Manual deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secrets" class="md-nav__link">
+    Secrets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-improvements" class="md-nav__link">
+    Future improvements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -408,7 +664,110 @@
                 
                   <h1>Backend</h1>
                 
-                
+                <p>Our backend uses WordPress.</p>
+<h2 id="local-development">Local development<a class="headerlink" href="#local-development" title="Permanent link">&para;</a></h2>
+<p>Install <a href="https://docs.docker.com/compose/install/">Docker Compose</a>. Then, make sure the Docker daemon is running.</p>
+<p>Run the following commands:</p>
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/TheStanfordDaily/stanforddaily-wordpress
+<span class="nb">cd</span> stanforddaily-wordpress
+docker-compose up
+</code></pre></div>
+
+
+<p>Then, open up <a href="http://localhost:8000/wp-admin/">http://localhost:8000/wp-admin/</a> in your browser, and you will see the WordPress admin. You should go to the "themes" section and enable the "tsd-headless" theme.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will work, though you won't be able to see any UI. This is because this is a "headless CMS" -- all the UI is handled by the <a href="../frontend/">React frontend</a>.</p>
+</div>
+<h3 id="directory-structure">Directory structure<a class="headerlink" href="#directory-structure" title="Permanent link">&para;</a></h3>
+<p>Don't touch any of the default wordpress generated files (<code>wp-admin</code>, <code>wp-includes</code>, etc.), as they are auto-generated upon WordPress installation. They should only be updated if you decide to upgrade to a new version of WordPress.</p>
+<h3 id="adstxt"><a href="https://github.com/TheStanfordDaily/stanforddaily-wordpress/blob/master/ads.txt">ads.txt</a><a class="headerlink" href="#adstxt" title="Permanent link">&para;</a></h3>
+<p>This is the file that gets served (with some modifications) at <a href="https://www.stanforddaily.com/ads.txt">https://www.stanforddaily.com/ads.txt</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">TODO</p>
+<p>I'm not sure if this is the actual file -- will need to double check on this - Ashwin</p>
+</div>
+<h3 id="wp-contentthemes"><a href="https://github.com/TheStanfordDaily/stanforddaily-wordpress/blob/master/wp-content/themes">wp-content/themes</a><a class="headerlink" href="#wp-contentthemes" title="Permanent link">&para;</a></h3>
+<p>This directory contains all the themes. The only theme we have is called "TSD Headless" and is located at <a href="https://github.com/TheStanfordDaily/stanforddaily-wordpress/tree/master/wp-content/themes/tsd-headless">wp-content/themes/tsd-headless</a>.</p>
+<p>This theme is based on <a href="https://github.com/postlight/headless-wp-starter">postlight/headless-wp-starter</a> but with a few modifications.</p>
+<h3 id="wp-contentplugins"><a href="https://github.com/TheStanfordDaily/stanforddaily-wordpress/blob/master/wp-content/plugins">wp-content/plugins</a><a class="headerlink" href="#wp-contentplugins" title="Permanent link">&para;</a></h3>
+<p>This directory contains all plugins. Some of these are plugins are not developed by us; the ones developed by us are prefixed by <code>tsd</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Plugin folder name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tsd-jobs</td>
+<td>REST API endpoints for the jobs board.</td>
+</tr>
+<tr>
+<td>tsd-json</td>
+<td>Custom REST API endpoints that are used by the React frontend of <a href="https://www.stanforddaily.com">https://www.stanforddaily.com</a>.</td>
+</tr>
+<tr>
+<td>tsd-push-notification</td>
+<td>WordPress admin pages for sending push notifications through Expo's push notification service on a specific article</td>
+</tr>
+<tr>
+<td>tsd_authors_plugin</td>
+<td>Author information for the mobile app (not in use, should delete)</td>
+</tr>
+<tr>
+<td>tsd_plugin_magazine_posts</td>
+<td>Create a "magazine posts" post type on the WordPress admin page (not in use, should delete)</td>
+</tr>
+<tr>
+<td>tsd_plugin_rss_digest</td>
+<td>Customizes the RSS feed (not in use since we switched to a hand-written digest in Fall 2019, should delete)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not install any plugins directly from the WordPress admin console. This makes it harder to keep everything in sync and version plugins in source control. Instead, if you want to add a new WordPress plugin, first download the plugin and then copy the folder to the <code>wp-content/plugins</code> folder.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you create a new plugin and then deploy it, you will need to go to the WordPress Admin console plugins page and then manually enable it.</p>
+</div>
+<h3 id="test"><a href="https://github.com/TheStanfordDaily/stanforddaily-wordpress/tree/master/test">test</a><a class="headerlink" href="#test" title="Permanent link">&para;</a></h3>
+<p>This directory contains some end-to-end tests. Right now, we only test the jobs plugin, but we could add more tests in the future.</p>
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<p>We deploy our site to WPEngine. Deployment of the website happens automatically to both our staging website and production website through a <a href="https://github.com/TheStanfordDaily/stanforddaily-wordpress/blob/master/.github/workflows/deploy.yml">GitHub Actions script</a>, whenever new code is pushed to master.</p>
+<h3 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h3>
+<p>WPEngine is a managed WordPress hosting service. The site on WPEngine for our main WordPress website is called <code>stanforddaily2</code>. For each of our sites (production and staging), WPEngine creates both a MySQL database and a PHP instance.</p>
+<p>Our staging website is available at: <a href="http://stanforddaily2.staging.wpengine.com/wp-admin/">http://stanforddaily2.staging.wpengine.com/wp-admin/</a></p>
+<p>Our production website is available at: <a href="https://wp.stanforddaily.com/wp-admin/">https://wp.stanforddaily.com/wp-admin/</a></p>
+<h3 id="copying-from-production-to-staging">Copying from production to staging<a class="headerlink" href="#copying-from-production-to-staging" title="Permanent link">&para;</a></h3>
+<p>Sometimes you may want to copy data from the production to the staging website. To do so, go to the "WP Engine" tab in WordPress Admin and click "Copy site from LIVE to STAGING" (don't click "Deploy site from STAGING to LIVE"!).</p>
+<p>You will need admin access on WordPress to do this.</p>
+<p><img alt="staging" src="../img/staging.png" /></p>
+<h3 id="manual-deployment">Manual deployment<a class="headerlink" href="#manual-deployment" title="Permanent link">&para;</a></h3>
+<p>If, for some reason, you need to manually deploy, first <a href="https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key">generate a new SSH key using the <code>ssh-keygen</code> tool</a> (don't include a passphrase). Then go to the "Git push" section and add the new public key to the list of authorized Git push users.</p>
+<p><img alt="wpengine git push" src="../img/wpengine%20git%20push.png" /></p>
+<p>Finally, you can do the following steps to manually deploy:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># deploy to staging:</span>
+git push git@git.wpengine.com:staging/stanforddaily2.git master
+<span class="c1"># deploy to production:</span>
+git push git@git.wpengine.com:production/stanforddaily2.git master
+</code></pre></div>
+
+
+<p>Sometimes your push may be rejected because you need to pull new updates (such as a WordPress maintenance upgrade) from the remote. In this case, first pull the latest changes:</p>
+<div class="codehilite"><pre><span></span><code>git pull git@git.wpengine.com:production/stanforddaily2.git master
+</code></pre></div>
+
+
+<h3 id="secrets">Secrets<a class="headerlink" href="#secrets" title="Permanent link">&para;</a></h3>
+<p>We have one secret in the GitHub repository: <code>WPENGINE_SSH_PRIVATE_KEY</code>.</p>
+<p>If you need to regenerate the secret (in the event of a secret compromise), follow the steps in the "Manual deployment" section to generate a new SSH key. Then, you can add a new public key to WPEngine with the name "github-actions-deploy".</p>
+<p>Set the <code>WPENGINE_SSH_PRIVATE_KEY</code> secret to be equal to the value of the generated private key.</p>
+<h3 id="future-improvements">Future improvements<a class="headerlink" href="#future-improvements" title="Permanent link">&para;</a></h3>
+<p>We should add more tests, especially to the <code>tsd-json</code> plugin.</p>
                 
               
               
