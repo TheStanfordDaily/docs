@@ -69,7 +69,7 @@ We deploy using the Serverless Framework. This creates an S3 bucket with static 
 
 The current CloudFront distribution for [https://www.stanforddaily.com](https://www.stanforddaily.com) is at [https://d3uak7r5z7qp0p.cloudfront.net/](https://d3uak7r5z7qp0p.cloudfront.net/).
 
-Finally, stanforddaily.com has DNS records (stored in both Ezoic and Cloudflare) that point to this cloudfront distribution (a CNAME record to d3uak7r5z7qp0p.cloudfront.net).
+Finally, stanforddaily.com has DNS records (stored in both Ezoic and CloudFlare) that point to this cloudfront distribution (a CNAME record to d3uak7r5z7qp0p.cloudfront.net).
 
 You can view all CloudFront distributions at [https://console.aws.amazon.com/cloudfront/home](https://console.aws.amazon.com/cloudfront/home).
 
