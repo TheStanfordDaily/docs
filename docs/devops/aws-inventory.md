@@ -19,15 +19,15 @@ This is a list of all resources we have running on AWS. We should update this pa
 
 | Name      | Description |
 | ----------- | ----------- |
-| E1MU9C4BR000HC | stanforddailyarchive s3 bucket, used? |
+| E1MU9C4BR000HC | points to stanforddailyarchive s3 bucket, used? |
 | E2O2I2VNYK2Y9V | tiles.archives.stanforddaily.com, used in archives site |
-| EX0VTA05TS561 | stanforddaily2-websitearchivestore s3 bucket, used? |
-| E2RTV8MSLJ2JL7 | used? |
-| EZVTI6YECIZ36 | used? |
-| E1KQ92TUUFP5VQ | used? |
-| EDFWYTZVO3RU9 | used? |
-| E290Z0NDY5BO7 | apply.stanforddaily.com s3 bucket, not  used |
-| E21NOBZ43QMRLT | used? |
+| EX0VTA05TS561 | points to stanforddaily2-websitearchivestore s3 bucket, used? |
+| E2RTV8MSLJ2JL7 | not used |
+| EZVTI6YECIZ36 | not used |
+| E1KQ92TUUFP5VQ | not used |
+| EDFWYTZVO3RU9 | not used |
+| E290Z0NDY5BO7 | points to apply.stanforddaily.com s3 bucket, not used |
+| E21NOBZ43QMRLT | not used |
 | ET6QB139FKVC3 | stanforddailyarchive.com |
 | E3L3TZ3UVTSU6Q | archives.stanforddaily.com |
 | E31H9RANCOIMM | www.stanforddaily.com |
