@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#documentation-structure" class="md-skip">
+        <a href="#running-the-docs-locally" class="md-skip">
           Skip to content
         </a>
       
@@ -215,8 +215,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation-structure" class="md-nav__link">
-    Documentation structure
+  <a href="#running-the-docs-locally" class="md-nav__link">
+    Running the docs locally
   </a>
   
 </li>
@@ -456,8 +456,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#documentation-structure" class="md-nav__link">
-    Documentation structure
+  <a href="#running-the-docs-locally" class="md-nav__link">
+    Running the docs locally
   </a>
   
 </li>
@@ -485,7 +485,15 @@
                   <h1>Home</h1>
                 
                 <p>Welcome to the Stanford Daily developer documentation. This site contains information about our infrastructure and instructions for setting up our code locally, as well as how deployment works and common troubleshooting issues.</p>
-<h2 id="documentation-structure">Documentation structure<a class="headerlink" href="#documentation-structure" title="Permanent link">&para;</a></h2>
+<h2 id="running-the-docs-locally">Running the docs locally<a class="headerlink" href="#running-the-docs-locally" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/TheStanfordDaily/docs.git
+<span class="nb">cd</span> docs
+pip install -r requirements-docs.txt
+mkdocs serve
+</code></pre></div>
+
+
+<p>Open up <a href="http://localhost:8000">http://localhost:8000</a> in your browser.</p>
                 
               
               
