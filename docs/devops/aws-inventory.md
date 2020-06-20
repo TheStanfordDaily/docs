@@ -15,7 +15,7 @@ This is a list of all resources we have running on AWS. We should update this pa
 | koxdx42-dqt2kly  | Next.js, used? |
 | 	c2m3cl8-6zgnou9 | Next.js, used but not sure what for |
 
-## Cloudfront distributions
+## CloudFront distributions
 
 | Name      | Description |
 | ----------- | ----------- |
