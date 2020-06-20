@@ -12,4 +12,4 @@ It encompasses the following GitHub repositories:
 
 Our website is architected as a [headless CMS](https://en.wikipedia.org/wiki/Headless_content_management_system) system.
 
-We use WordPress on the backend. For the frontend, a React static site built using Next JS actually renders the UI for the end user.
+We use WordPress on the backend. For the frontend, a React static site built using Next.js actually renders the UI for the end user.
