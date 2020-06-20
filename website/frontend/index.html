@@ -50,12 +50,17 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="blue-grey">
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#local-development" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -140,70 +145,6 @@
       
       
         
-          
-
-  
-
-<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../.." class="md-tabs__link">
-          Home
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../introduction/" class="md-tabs__link md-tabs__link--active">
-          Website
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../mobile-app/introduction/" class="md-tabs__link">
-          Mobile App
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../archives/introduction/" class="md-tabs__link">
-          Archives
-        </a>
-      
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
-        
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
@@ -268,8 +209,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Introduction" class="md-nav__link">
-      Introduction
+    <a href="../.." title="Overview" class="md-nav__link">
+      Overview
     </a>
   </li>
 
@@ -312,8 +253,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../introduction/" title="Introduction" class="md-nav__link">
-      Introduction
+    <a href="../overview/" title="Overview" class="md-nav__link">
+      Overview
     </a>
   </li>
 
@@ -330,9 +271,129 @@
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Frontend
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="./" title="Frontend" class="md-nav__link md-nav__link--active">
       Frontend
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#local-development" class="md-nav__link">
+    Local development
+  </a>
+  
+    <nav class="md-nav" aria-label="Local development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    Directory structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pages" class="md-nav__link">
+    pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helpers" class="md-nav__link">
+    helpers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ezoic-specific-notes" class="md-nav__link">
+    Ezoic-specific notes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    Deployment
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverlessyml" class="md-nav__link">
+    serverless.yml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-deployment" class="md-nav__link">
+    Manual deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secrets" class="md-nav__link">
+    Secrets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-improvements" class="md-nav__link">
+    Future improvements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -397,8 +458,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../mobile-app/introduction/" title="Introduction" class="md-nav__link">
-      Introduction
+    <a href="../../mobile-app/overview/" title="Overview" class="md-nav__link">
+      Overview
     </a>
   </li>
 
@@ -439,8 +500,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../archives/introduction/" title="Introduction" class="md-nav__link">
-      Introduction
+    <a href="../../archives/overview/" title="Overview" class="md-nav__link">
+      Overview
     </a>
   </li>
 
@@ -457,6 +518,125 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#local-development" class="md-nav__link">
+    Local development
+  </a>
+  
+    <nav class="md-nav" aria-label="Local development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    Directory structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pages" class="md-nav__link">
+    pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helpers" class="md-nav__link">
+    helpers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ezoic-specific-notes" class="md-nav__link">
+    Ezoic-specific notes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    Deployment
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverlessyml" class="md-nav__link">
+    serverless.yml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-deployment" class="md-nav__link">
+    Manual deployment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secrets" class="md-nav__link">
+    Secrets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-improvements" class="md-nav__link">
+    Future improvements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -472,7 +652,101 @@
                 
                   <h1>Frontend</h1>
                 
-                
+                <h2 id="local-development">Local development<a class="headerlink" href="#local-development" title="Permanent link">&para;</a></h2>
+<p>Install <a href="https://nodejs.org/en/">Node JS</a> and <a href="https://classic.yarnpkg.com/en/docs/install/#mac-stable">Yarn</a>.</p>
+<p>Run the following commands:</p>
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/TheStanfordDaily/stanforddaily.git
+<span class="nb">cd</span> stanforddaily
+yarn
+yarn start
+</code></pre></div>
+
+
+<p>Then, open up <a href="http://localhost:8000">http://localhost:8000</a> in your browser, and you will see a live-reloading preview of the local development site.</p>
+<p><img alt="local" src="../img/local.png" /></p>
+<h3 id="directory-structure">Directory structure<a class="headerlink" href="#directory-structure" title="Permanent link">&para;</a></h3>
+<p>This site is built using <a href="https://nextjs.org/">Next.js</a>, meaning that most pages are server-side rendered.</p>
+<h3 id="pages">pages<a class="headerlink" href="#pages" title="Permanent link">&para;</a></h3>
+<p>The <code>pages</code> directory contains a list of all the pages, with each file's file path mirroring the path of its corresponding page's URL. Note that pages can have placeholders denoted by brackets, which represent a URL parameter that can then be used by React components to render the right page.</p>
+<p><img alt="pages" src="../img/pages.png" /></p>
+<p>Our main article pages are located at the path <a href="https://github.com/TheStanfordDaily/stanforddaily/blob/master/pages/author/%5Bslug%5D/index.tsx"><code>pages/[year]/[month]/[day]/[slug].tsx</code></a>.</p>
+<p>For more information, see <a href="https://nextjs.org/docs/basic-features/pages">the Next.js documentation on pages</a>.</p>
+<h3 id="components">components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h3>
+<p>The <code>pages</code> directory usually renders a React component that is under the <code>components</code> directory -- this is where we store reusable React components that may be used on multiple pages.</p>
+<h3 id="helpers">helpers<a class="headerlink" href="#helpers" title="Permanent link">&para;</a></h3>
+<p>The <code>helpers</code> directory contains extra utility code, such as fetching data from the WordPress API.</p>
+<p>If you ever change the WordPress API through the <code>stanforddaily-wordpress</code> repository (for example, if you want to show different types of articles on the front page), you should also change <a href="https://github.com/TheStanfordDaily/stanforddaily/blob/master/helpers/tsd-json.json"><code>helpers/tsd-json.json</code></a> to reflect the new API structure and <a href="https://github.com/TheStanfordDaily/stanforddaily/blob/master/helpers/wpapi.ts"><code>helpers/wpapi.ts</code></a> to add new API endpoint functions, as needed.</p>
+<h3 id="ezoic-specific-notes">Ezoic-specific notes<a class="headerlink" href="#ezoic-specific-notes" title="Permanent link">&para;</a></h3>
+<p>In Spring 2020, we had issues with Ezoic ad scripts interfering with Next.js scripts, which then caused Uber Grids to not work anymore.</p>
+<p>To fix this, we decided to disable all Next.js scripts showing up in production on our article pages. For this, we added the experimental <code>unstable_runtimeJS</code> parameter to <a href="https://github.com/TheStanfordDaily/stanforddaily/blob/master/pages/%5Byear%5D/%5Bmonth%5D/%5Bday%5D/%5Bslug%5D.tsx"><code>pages/[year]/[month]/[day]/[slug].tsx</code></a>:</p>
+<div class="codehilite"><pre><span></span><code><span class="kr">export</span> <span class="kr">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">unstable_runtimeJS</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">};</span>
+</code></pre></div>
+
+
+<p>What this means, though, is that we cannot run any interactive javascript (such as <code>componentDidMount</code> or event handlers) through React on our article pages. Thus, for any extra interactivity, we had to manually add a <code>&lt;script&gt;</code> tag into the page instead.</p>
+<p>This caused us to <a href="https://github.com/TheStanfordDaily/stanforddaily/commit/6282eaf4e95886387d6d65ecde7bd59441c4905a">switch away from using react-disqus</a> and <a href="https://github.com/TheStanfordDaily/stanforddaily/commit/6282eaf4e95886387d6d65ecde7bd59441c4905a">react-ga</a> in favor of manually embedded script tags.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a major limitation, but we have worked around this so far by the manually embedded script tags mentioned above. Keep this limitation (and workaround) in mind if you need to add any custom scripts to React pages.</p>
+</div>
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<p>We deploy our site to AWS. Deployment of the website happens automatically to our production website through a <a href="https://github.com/TheStanfordDaily/stanforddaily/blob/master/.github/workflows/deploy.yml">GitHub Actions script</a>.</p>
+<h3 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h3>
+<p>We deploy using the Serverless Framework. This creates an S3 bucket with static pages and a Lambda@edge function that runs the Next.js server-side rendering code. Both the S3 bucket and the Lambda@edge function are connected to a Cloudfront distribution which actually serves our content.</p>
+<p>The current CloudFront distribution for <a href="https://www.stanforddaily.com">https://www.stanforddaily.com</a> is at <a href="https://d3uak7r5z7qp0p.cloudfront.net/">https://d3uak7r5z7qp0p.cloudfront.net/</a>.</p>
+<p>Finally, stanforddaily.com has DNS records (stored in both Ezoic and CloudFlare) that point to this cloudfront distribution (a CNAME record to d3uak7r5z7qp0p.cloudfront.net).</p>
+<p>You can view all CloudFront distributions at <a href="https://console.aws.amazon.com/cloudfront/home">https://console.aws.amazon.com/cloudfront/home</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please do not make any changes to the CloudFront distributions through the AWS console; instead, do so by modifying <code>serverless.yml</code> as mentioned in the next section. Otherwise, the automatic deploys may end up overwriting any manual changes done through the AWS console.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We use the serverless-next.js serverless component for deployment. Please see the link to the <a href="https://github.com/danielcondemarin/serverless-next.js#serverless-nextjs-component">serverless-next.js component</a> repository to see a full description of the architecture it sets up.</p>
+</div>
+<h3 id="serverlessyml">serverless.yml<a class="headerlink" href="#serverlessyml" title="Permanent link">&para;</a></h3>
+<p>The <a href="https://github.com/TheStanfordDaily/stanforddaily/blob/master/serverless.yml">serverless.yml</a> file configures what is deployed using the serverless-next.js component. It has values such as the following:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">myNextApplication</span><span class="p">:</span>
+  <span class="nt">component</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">serverless-next.js@1.10.0</span>
+  <span class="nt">inputs</span><span class="p">:</span>
+    <span class="nt">memory</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1024</span>
+    <span class="nt">cloudfront</span><span class="p">:</span>
+      <span class="nt">comment</span><span class="p">:</span> <span class="s">&quot;Stanford</span><span class="nv"> </span><span class="s">Daily</span><span class="nv"> </span><span class="s">website&quot;</span>
+      <span class="nt">defaults</span><span class="p">:</span>
+        <span class="nt">ttl</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">60</span>
+        <span class="nt">compress</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+        <span class="nt">forward</span><span class="p">:</span>
+          <span class="nt">headers</span><span class="p">:</span> <span class="s">&#39;none&#39;</span>
+          <span class="nt">cookies</span><span class="p">:</span> <span class="s">&#39;none&#39;</span>
+          <span class="nt">queryString</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+          <span class="nt">queryStringCacheKeys</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;s&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;p&#39;</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+
+
+<p>Note that everything under the <code>cloudfront</code> key controls the deployment of the CloudFront distribution. You can find a reference for acceptable parameters at the documentation for the <a href="https://github.com/serverless-components/aws-cloudfront">aws-cloudfront serverless component</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>queryStringCacheKeys</code> parameter is important; it is used so that https://www.stanforddaily.com/, https://www.stanforddaily.com/?p=1168395 (links to a particular post by Disqus), and https://www.stanforddaily.com/?s=search (used for search) are treated as different pages by the cache. Otherwise, by default, CloudFront treats all pages with the same path but different query strings as the same page. </p>
+</div>
+<h3 id="manual-deployment">Manual deployment<a class="headerlink" href="#manual-deployment" title="Permanent link">&para;</a></h3>
+<p>If, for some reason, you need to manually deploy, first install the <a href="https://aws.amazon.com/cli/">AWS CLI</a> and run <code>aws configure</code> to configure the AWS CLI with your AWS account credentials. Then, run the following from the root of the repository:</p>
+<div class="codehilite"><pre><span></span><code>yarn
+yarn build
+yarn deploy
+</code></pre></div>
+
+
+<h3 id="secrets">Secrets<a class="headerlink" href="#secrets" title="Permanent link">&para;</a></h3>
+<p>We have two secrets in the GitHub repository: <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code>.</p>
+<p>If you need to regenerate the secrets (in the event of an AWS account compromise), create a new IAM user, create credentials for that user, and then set the secrets for that user in the <a href="https://github.com/TheStanfordDaily/stanforddaily/settings/secrets">GitHub repository settings page</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only repository admins can edit secrets.</p>
+</div>
+<h3 id="future-improvements">Future improvements<a class="headerlink" href="#future-improvements" title="Permanent link">&para;</a></h3>
+<p>It would be nice to create a staging site at <a href="http://beta.stanforddaily.com">http://beta.stanforddaily.com</a> where we can automatically deploy the latest changes from master, and then only selectively deploy the branch to production after testing. Right now, we have no testing phase because changes on master are deployed directly to production.</p>
                 
               
               
@@ -491,7 +765,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../introduction/" title="Introduction" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../overview/" title="Overview" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -500,7 +774,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Introduction
+                Overview
               </div>
             </div>
           </a>
@@ -545,7 +819,7 @@
       <script>
         app = initialize({
           base: "../..",
-          features: ["tabs"],
+          features: [],
           search: Object.assign({
             worker: "../../assets/javascripts/worker/search.37585f48.min.js"
           }, typeof search !== "undefined" && search)
