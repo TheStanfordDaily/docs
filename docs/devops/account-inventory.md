@@ -22,5 +22,6 @@ All tech-related accounts that the Daily has.
 | Flourish | Data visualization |
 | Azure | Not used (pending deletion) |
 | Netlify | Hosts the Open Data Portal |
+| Issuu | Hosts magazine articles and Daily print papers |
 
 <!-- TODO: Add usernames for accounts, but *not* passwords. -->
