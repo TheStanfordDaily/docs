@@ -3,10 +3,10 @@ All tech-related accounts that the Daily has.
 | Name      | Description |
 | ----------- | ----------- |
 | G Suite (tech@stanforddaily.com) | Email, drive, docs, etc. |
-| Bitbucket | Git repos | 
-| GoDaddy | Domain for stanforddailyarchive.com |
+| Bitbucket | Git repos for old archives search (pending deletion) | 
+| GoDaddy | Domain for stanforddailyarchive.com (pending deletion and migration to Cloudflare) |
 | Cloudflare | DNS for stanforddaily.com, stanforddailyarchive.com |
-| Register.com | Domain for stanforddaily.com |
+| Register.com | Domain for stanforddaily.com (pending deletion and migration to Cloudflare) |
 | WPEngine | WordPress hosting for stanforddaily.com and other subdomains | 
 | MailChimp | Email digests |
 | AWS | AWS cloud resources |
@@ -19,7 +19,7 @@ All tech-related accounts that the Daily has.
 | Firebase | Modeling the Draw data |
 | Expo | Mobile app publishing |
 | Flourish | Data visualization |
-| Azure | Not used |
+| Azure | Not used (pending deletion) |
 | Netlify | Hosts the Open Data Portal |
 
 <!-- TODO: Add usernames for accounts, but *not* passwords. -->
