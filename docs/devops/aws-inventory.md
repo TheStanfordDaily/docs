@@ -55,3 +55,6 @@ This is a list of all resources we have running on AWS. We should update this pa
 | stanforddailyarchive-tiled | used, has tiled archive files for use in the archive site |
 | v45shx7-yilyph8 | used? |
 | www.apply.stanforddaily.com | not used |
+
+
+<!-- TODO: AWS Cognito user pools for jobs board, Amazon CloudSearch for archives -->
