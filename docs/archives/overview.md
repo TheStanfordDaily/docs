@@ -1,35 +1,7 @@
-website introduction
+[The Stanford Daily Archives](https://archives.stanforddaily.com) hosts all of the Stanford Daily's archived prints. It can be found at [archives.stanforddaily.com](https://archives.stanforddaily.com)
 
-Todo:
-- backend
-  - search
-    - cloudsearch
-      - uploading
-      - navigating
-      - searching
-      - sizing
-      - ref
-    - api gateway
-      - why needed
-      - how to use
-      - gotchas
-      - ref
-    - archives scripts tour
-- frontend
-  - search
-    - lucene syntax
-    - queries
-  - workflow
-    1. make branch
-    2. make changes
-    3. save, see changes
-    4. debug, go back to step 2 or continue
-    5. make PR
-    6. approve and merge PR
-    7. pull checkout master 
-    8. yarn deploy at master.
-  - gotchas
-    - utc
+The archives are built with React on the frontend and powered by AWS on the backend.
 
+To read more about the frontend, go [here](frontend.md)
 
-
+To read more about the backend, go [here](backend.md)

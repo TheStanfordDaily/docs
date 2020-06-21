@@ -38,3 +38,5 @@ nav:
       Overview: mobile-app/overview.md
   - Archives:
       Overview: archives/overview.md
+      Frontend: archives/frontend.md
+      Backend: archives/backend.md
