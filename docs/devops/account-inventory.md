@@ -3,6 +3,7 @@ All tech-related accounts that the Daily has.
 | Name      | Description |
 | ----------- | ----------- |
 | G Suite (tech@stanforddaily.com) | Email, drive, docs, etc. |
+| GitHub | All code and CI |
 | Bitbucket | Git repos for old archives search (pending deletion) | 
 | GoDaddy | Domain for stanforddailyarchive.com (pending deletion and migration to Cloudflare) |
 | Cloudflare | DNS for stanforddaily.com, stanforddailyarchive.com |
