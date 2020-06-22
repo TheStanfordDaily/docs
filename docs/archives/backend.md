@@ -6,39 +6,54 @@ These things include:
 - responding to frontend fetching issue images
 - responding to frontend submitting corrections to articles
 
-## Responding to Frontend Fetching Search Results
-When the frontend makes a search request, they are directly interacting with an aws API Gateway. Read more about API Gateways below. The API Gateway then routes the frontend's request to the cloudsearch endpoint, at which point the server backing the cloudsearch endpoint will process the search query and then respond to API Gateway with the results. API Gateway then forwards this back to the frontend. You can read more about cloudsearch below.
+## Responding to frontend fetching search results
+When the frontend makes a search request, they are directly interacting with an aws API Gateway. Read more about API Gateways below. The API Gateway then routes the frontend's request to the CloudSearch endpoint, at which point the server backing the CloudSearch endpoint will process the search query and then respond to API Gateway with the results. API Gateway then forwards this back to the frontend. You can read more about CloudSearch below.
 
-## Responding to Frontend Fetching Article Text
-There unfortunately isn't a single canonical source for article text on archives. There are two places that article text is stored. The first is on github. You can find the text for all the archived articles [here](https://github.com/thestanforddaily/archives-text). It's a massive repo and working with it is a pain (git doesn't scale super well, so actions like `git status` take > 10 min; it took me ~2 hours to submit corrections to all articles in the repo. Also, commit directly to master when working with archives-text). The other source for article text is in cloudsearch, as there is an article-text field in cloudsearch. Technically, the data in cloudsearch was derived from the archives-text repo, but they aren't connected in any other way; if you make changes to archive-text, they won't automatically sync to cloudsearch. There are many things to be improved here.
+## Responding to frontend fetching article text
+The canonical source (i.e. "source of truth") for archives article text is the `archives-text` github repo which can be found [here](https://github.com/thestanforddaily/archives-text). This is a massive repo (~10GB of data) and since Git doesn't scale well, it's a pain to work with. So if you ever need to work with it (which is likely as the articles text still have quite a few errors), just know that git actions like `git status` will take a very long time (I wouldn't be surprised if it took an hour to `git add` or `git commit`). Also don't use `zsh` when browsing this repo on your local machine because `zsh` doesn't scale well with large directories. 
 
 When fetching article text on the frontend (e.g. when you go to an article and see the corresponding text to that article in the side bar), this text comes from the archives-text repository. The backend is really all handled by github and their API. The only thing that concerns us here is ensuring that this repo's data is up to date.
 
-## Responding to Frontend Fetching Issue Images
-Issue images are fetched on the frontend by openseadragon. These images live in AWS s3 buckets, so the images are fetched from there. I don't know much about this tbh so I can't really document it well
+## Responding to frontend fetching issue images
+Issue images are fetched on the frontend by OpenSeadragon. OpenSeadragon fetches tiled images that come from a CloudFront distribution; this distribution serves images from the stanforddailyarchive-tiled S3 bucket.
 
-## Responding to Frontend Submitting Corrections to Articles
-The frontend corrections form is powered by google forms. We're using an embedded form. Checkout [this](https://trevorfox.com/2015/06/dynamically-pre-fill-google-forms-with-mailchimp-merge-tags/) for more details
+The original (non-tiled) images of article pages, PDFs of issues, as well as the original METS / ALTO files (with transcriptions), can be found on the stanforddailyarchive S3 bucket.
 
-## Cloudsearch
-Cloudsearch is a search engine service by AWS which powers the archives search functionality. Cloudsearch is powered by Apache Solr. 
+## Responding to frontend submitting corrections to articles
+The frontend corrections form is powered by google forms. We're using an embedded form. Checkout [this](https://trevorfox.com/2015/06/dynamically-pre-fill-google-forms-with-mailchimp-merge-tags/) for more details. You can see the google form [here](https://docs.google.com/forms/d/e/1FAIpQLSf8BdqmWzBnOTVg9AS_diCDUbLO-JB3T_BJHo72PzwQGZo5oQ/viewform?embedded=false)
 
-To "see" cloudsearch, go to `aws.amazon.com` and sign in. Then, in the find services search bar, search for cloudsearch. Once there, there should be a `archives-text-cloudsearch` domain. If you click on it, you can interact with the cloudsearch through aws's interface. Here you can search, and you can upload data. Note that you don't need to use AWS's own interface to do these two things. Amazon provides APIs which we can do these things programmatically. 
+## CloudSearch
+CloudSearch is a search engine service by AWS which powers the archives search functionality. CloudSearch is powered by Apache Solr. 
 
-We interact with cloudsearch programmatically in two ways:
+To "see" CloudSearch, go to `aws.amazon.com` and sign in. Then, in the find services search bar, search for CloudSearch. Once there, there should be a `archives-text-CloudSearch` domain. If you click on it, you can interact with the CloudSearch through aws's interface. Here you can search the data set as well as configure the data set and Cloudsearch Instance. This is the best place in my opinion to configure the Cloudsearch Instance. Note that you don't need to use AWS's own interface to do these things. Amazon provides APIs which we can do these things programmatically. 
+
+Here are some images which are more descriptive. 
+
+1. Open [AWS console](http://console.aws.amazon.com/) and find CloudSearch
+   ![AWS console find cloudsearch](img/aws_console_find_cloudsearch.png)
+2. Cloudsearch Dashboard (clicking on the CloudSearch search suggestion in previous image brings us here)
+    ![Cloudsearch Dashboard](img/cloudsearch_dashboard.png)
+3. Archives Text Cloudsearch Dashboard (clicking on "archives-text-cloudsearch" in previous image brings us here)
+    ![Archives Text Cloudsearch Dashboard](img/archives_text_cloudsearch_dashboard.png)
+4. Archives Text Cloudsearch Test Search Dashboard (clicking on "Run a Test Search" in the side bar of previous image brings us here)
+   ![Archives Text Cloudsearch Dashboard Test Search](img/archives_text_cloudsearch_dashboard_test_search.png)
+   
+As previously discussed, the archives-text repo is the canonical source of archives-text information. However, it is not the only source where archives-text information is stored. The other place that article text is stored is in CloudSearch. In CloudSearch, there is an article-text field. All of this data should be the same as the archives-text repo. But be careful, because the two sources of data are in no way synched. If you change data in one place, be sure to change it in another. Typically the workflow is: make changes to the archives-text repo, then run the data upload scripts described below to synch data to CloudSearch. This isn't ideal. Perhaps it can be done automatically. Another idea would to have just a single source of article-text data. 
+
+We interact with CloudSearch programmatically in two ways:
 
 - Searching
 - Uploading Data
 
 ### Searching
-Searching is pretty simple. You just submit a query to an endpoint and the endpoint responds with the search results. 
+Searching is pretty simple. You just submit a query to an endpoint in the form of a http request and the endpoint responds with the search results. 
 
-### Uploading Data
-We have around 10GB of article text data in the archives-text repository and we need to upload that data to CloudSearch so that it has the data which we are searching over. There are python scripts which upload this data to CloudSearch in the archives-scripts repository. You can find them [here](https://github.com/thestanforddaily/archives-scripts) and [here](https://github.com/TheStanfordDaily/archives-scripts/tree/master/cloudsearch). These two sources have a bit more documentation about CloudSearch, so go there to find out more.
+### Uploading data
+We have around 10GB of article text data in the archives-text repository and we need to upload that data to CloudSearch so that it has the data which we are searching over. There are python scripts which upload this data to CloudSearch in the archives-scripts repository. You can find them [here](https://github.com/thestanforddaily/archives-scripts) and [here](https://github.com/TheStanfordDaily/archives-scripts/tree/master/CloudSearch). These two sources have a bit more documentation about CloudSearch, so go there to find out more.
 
 ## API Gateway
 Unfortunately, CloudSearch doesn't allow cross origin requests to its endpoint. What this means is that we can't directly query the CloudSearch endpoint from the archives frontend. As a result, we need to setup an AWS API gateway for the CloudSearch endpoint. An API Gateway is essentially an endpoint which "wraps" around our CloudSearch endpoint. It offers several functions: you can "pre-process" and validate requests to CloudSearch and you can "post-process" requests to CloudSearch. AWS [has a lot more doc](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html) for API Gateway. 
 
-To access API Gateway, go to the AWS Console and search for "API Gateway." Then, there should be a gateway called `archives-cloudsearch-search-api`. Click on this. Then, click on the Get Method. You should see a flow chart with a test item, method request, integration request etc. If you click on method request and expand url query string parameter, you'll see a lot of the query string parameters which correspond to cloudsearch queries. The way gateway works is we need to explicitly tell the gateway which url queries are permitted to pass through the gateway. Once you add a parameter here, you need to go to integration request and add the same query string parameter to url query string parameters there. Name field should be the same as the query parameter, and mapped from should be whatever query parameter we're mapping from in the method request section. 
+To access API Gateway, go to the AWS Console and search for "API Gateway." Then, there should be a gateway called `archives-CloudSearch-search-api`. Click on this. Then, click on the Get Method. You should see a flow chart with a test item, method request, integration request etc. If you click on method request and expand url query string parameter, you'll see a lot of the query string parameters which correspond to CloudSearch queries. The way gateway works is we need to explicitly tell the gateway which url queries are permitted to pass through the gateway. Once you add a parameter here, you need to go to integration request and add the same query string parameter to url query string parameters there. Name field should be the same as the query parameter, and mapped from should be whatever query parameter we're mapping from in the method request section. 
 
 After you've made changes, you can test them in the test section. Then if you're satisfied, you need to deploy them to have the actually take effect. To do this, do to the actions dropdown and select deploy api, then select deployment stage (may need to create a new one) and click deploy. Now, the changes should take effect, and we can access the API gateway properly on the frontend. 
