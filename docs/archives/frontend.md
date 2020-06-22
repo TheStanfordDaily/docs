@@ -18,7 +18,7 @@ The front end is built using several technologies:
 - lucene syntax
   - lucene is a query language, and is used to interface with cloudsearch on the backend. 
 
-workflow
+## Workflow
 
   1. make branch
   2. make changes
