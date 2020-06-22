@@ -11,7 +11,7 @@ The front end is built using several technologies:
 - openseadragon
   - This is used to display the images of archived newspapers
   - Doesn't mesh super well with next.js in my experience, so may need to disable SSR when using
-- React Big Calendar
+- [react-big-calendar](https://github.com/jquense/react-big-calendar)
   - This is used to display the monthly calendar under the calendar page
 - [react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)
   - This is used to create the search form under search
