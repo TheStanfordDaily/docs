@@ -1,6 +1,6 @@
 Several things power archives on the backend, and they're each located in different spots.
 
-These things include
+These things include:
 - responding to frontend fetching search results
 - responding to frontend fetching article text
 - responding to frontend fetching issue images
