@@ -13,7 +13,7 @@ The front end is built using several technologies:
   - Doesn't mesh super well with next.js in my experience, so may need to disable SSR when using
 - React Big Calendar
   - This is used to display the monthly calendar under the calendar page
-- React jsonschema form
+- [react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form)
   - This is used to create the search form under search
 - lucene syntax
   - lucene is a query language, and is used to interface with cloudsearch on the backend. 
