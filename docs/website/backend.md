@@ -110,3 +110,9 @@ Set the `WPENGINE_SSH_PRIVATE_KEY` secret to be equal to the value of the genera
 ### Future improvements
 
 We should add more tests, especially to the `tsd-json` plugin.
+
+## Debug
+
+To debug, here are some useful links:
+
+- [Lambda@edge function production logs](https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/$252Faws$252Flambda$252Fus-east-1.c2m3cl8-6zgnou9)
