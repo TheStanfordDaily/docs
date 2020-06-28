@@ -32,8 +32,10 @@ nav:
       Backend: website/backend.md
       Data Viz: website/data-viz.md
   - DevOps:
-      AWS Inventory: devops/aws-inventory.md
       DNS: devops/dns.md
+      AWS Inventory: devops/aws-inventory.md
+      Domain Inventory: devops/domain-inventory.md
+      Account Inventory: devops/account-inventory.md
   - Mobile App:
       Overview: mobile-app/overview.md
   - Archives:
