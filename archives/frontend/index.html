@@ -15,7 +15,7 @@
     
     
       
-        <title>Overview - The Stanford Daily Developer Documentation</title>
+        <title>Frontend - The Stanford Daily Developer Documentation</title>
       
     
     
@@ -57,6 +57,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#workflow" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -80,7 +85,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Overview
+              Frontend
             
           </span>
         </div>
@@ -414,6 +419,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -422,22 +439,83 @@
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-    <a href="./" title="Overview" class="md-nav__link md-nav__link--active">
-      Overview
-    </a>
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Frontend
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../frontend/" title="Frontend" class="md-nav__link">
+    <a href="./" title="Frontend" class="md-nav__link md-nav__link--active">
       Frontend
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gotchas" class="md-nav__link">
+    Gotchas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-interactions" class="md-nav__link">
+    Backend interactions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fetching-search-results" class="md-nav__link">
+    Fetching search results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fetching-article-text" class="md-nav__link">
+    Fetching article text
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fetching-issue-images" class="md-nav__link">
+    Fetching issue images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitting-corrections-to-articles" class="md-nav__link">
+    Submitting corrections to articles
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -465,12 +543,84 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    Workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gotchas" class="md-nav__link">
+    Gotchas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-interactions" class="md-nav__link">
+    Backend interactions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fetching-search-results" class="md-nav__link">
+    Fetching search results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fetching-article-text" class="md-nav__link">
+    Fetching article text
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fetching-issue-images" class="md-nav__link">
+    Fetching issue images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitting-corrections-to-articles" class="md-nav__link">
+    Submitting corrections to articles
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/TheStanfordDaily/docs/edit/master/docs/archives/overview.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/TheStanfordDaily/docs/edit/master/docs/archives/frontend.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -478,12 +628,58 @@
                   
                 
                 
-                  <h1>Overview</h1>
+                  <h1>Frontend</h1>
                 
-                <p><a href="https://archives.stanforddaily.com">The Stanford Daily Archives</a> hosts all of the Stanford Daily's archived prints. It can be found at <a href="https://archives.stanforddaily.com">archives.stanforddaily.com</a></p>
-<p>The archives are built with React on the frontend and powered by AWS on the backend.</p>
-<p>To read more about the frontend, go <a href="../frontend/">here</a></p>
-<p>To read more about the backend, go <a href="../backend/">here</a></p>
+                <p>The frontend code is located in the <a href="https://github.com/thestanforddaily/archives-web">archives-web</a> repository. </p>
+<p>You can find an introductory slide deck <a href="https://docs.google.com/presentation/d/1NwBSJjKjSDomaCoDW--owvon-N3aJZNCX9yaF9KNygk/edit?usp=sharing">here</a></p>
+<p>The front end is built using several technologies:</p>
+<ul>
+<li>React</li>
+<li>Next.js</li>
+<li>For server side rendering, allows for faster page loading and better caching. </li>
+<li>There should be a writeup about Next.js somewhere...</li>
+<li><a href="https://openseadragon.github.io/">OpenSeadragon</a></li>
+<li>This is used to display the images of archived newspapers</li>
+<li>Doesn't mesh super well with Next.js in my experience, so may need to disable SSR when using</li>
+<li><a href="https://github.com/jquense/react-big-calendar">react-big-calendar</a></li>
+<li>This is used to display the monthly calendar under the calendar page</li>
+<li><a href="https://github.com/rjsf-team/react-jsonschema-form">react-jsonschema-form</a></li>
+<li>This is used to create the search form under search</li>
+<li><a href="https://lucene.apache.org/core/2_9_4/queryparsersyntax.html">Lucene syntax</a></li>
+<li>Lucene is a query language, and is used to interface with CloudSearch on the backend. </li>
+</ul>
+<h2 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">&para;</a></h2>
+<ol>
+<li>make branch</li>
+<li>make changes</li>
+<li>save, see changes</li>
+<li>debug, go back to step 2 or continue</li>
+<li>make PR</li>
+<li>approve and merge PR</li>
+<li>pull checkout master </li>
+<li><code>yarn deploy</code> at master.</li>
+</ol>
+<h2 id="gotchas">Gotchas<a class="headerlink" href="#gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>moment</code> is used to calculate strings for dates throughout the frontend. However, <code>moment</code> is too "smart" in that it by default factors in different time zones. As a result, you may encounter the situation where a date is correct when developing on your local machine, but then when you deploy, the date is incorrect in production. This is likely due to <code>moment</code>/timezones. To fix this, use <code>moment.utc</code> to convert all <code>moment</code>s to the same time zone.</li>
+<li>You can find an example of this <a href="https://github.com/TheStanfordDaily/archives-web/blob/d317d8d347dd04099ba5620d0333c8e0da12064d/components/PaperView.jsx#L424">here</a></li>
+</ul>
+<h2 id="backend-interactions">Backend interactions<a class="headerlink" href="#backend-interactions" title="Permanent link">&para;</a></h2>
+<p>The frontend interacts with the backend in several ways:</p>
+<ul>
+<li>fetching search results</li>
+<li>fetching article text</li>
+<li>fetching issue images</li>
+<li>submitting corrections to articles</li>
+</ul>
+<h2 id="fetching-search-results">Fetching search results<a class="headerlink" href="#fetching-search-results" title="Permanent link">&para;</a></h2>
+<p>We interact with CloudSearch to do this. We submit queries to an endpoint and the endpoint responds with search results. the way we create these queries is with lucene syntax.</p>
+<h2 id="fetching-article-text">Fetching article text<a class="headerlink" href="#fetching-article-text" title="Permanent link">&para;</a></h2>
+<p>This is done in <code>helpers/papers.js</code>. We're just using github's api here, and the important thing is how to correctly structure queries. </p>
+<h2 id="fetching-issue-images">Fetching issue images<a class="headerlink" href="#fetching-issue-images" title="Permanent link">&para;</a></h2>
+<p>This is handled by openseadragon. openseadragon makes requests to an endpoint for images when a user is trying to view the images for an article.</p>
+<h2 id="submitting-corrections-to-articles">Submitting corrections to articles<a class="headerlink" href="#submitting-corrections-to-articles" title="Permanent link">&para;</a></h2>
+<p>This is handled by google forms. When you click the submit button in the google form, it will send the request to the correct endpoint for us. One thing we do is use url parameters to prefill the google forms. You can read more <a href="https://trevorfox.com/2015/06/dynamically-pre-fill-google-forms-with-mailchimp-merge-tags/">here</a>.</p>
                 
               
               
@@ -502,7 +698,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../mobile-app/overview/" title="Overview" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../overview/" title="Overview" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -517,13 +713,13 @@
           </a>
         
         
-          <a href="../frontend/" title="Frontend" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../backend/" title="Backend" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Frontend
+                Backend
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

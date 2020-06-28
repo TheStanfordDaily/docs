@@ -221,6 +221,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#editing-the-docs" class="md-nav__link">
+    Editing the docs
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -463,6 +470,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="archives/frontend/" title="Frontend" class="md-nav__link">
+      Frontend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="archives/backend/" title="Backend" class="md-nav__link">
+      Backend
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -494,6 +525,13 @@
         <li class="md-nav__item">
   <a href="#running-the-docs-locally" class="md-nav__link">
     Running the docs locally
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-the-docs" class="md-nav__link">
+    Editing the docs
   </a>
   
 </li>
@@ -530,6 +568,31 @@ mkdocs serve
 
 
 <p>Open up <a href="http://localhost:8000">http://localhost:8000</a> in your browser.</p>
+<h2 id="editing-the-docs">Editing the docs<a class="headerlink" href="#editing-the-docs" title="Permanent link">&para;</a></h2>
+<p>To create a new item in the nav bar on the left: </p>
+<ol>
+<li>Open <code>mkdocs.yml</code></li>
+<li>Add  list member <code>- [title of nav bar item]:</code> under key <code>nav:</code>.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>nav bar item will be displayed in whatever position you place the list member relative to the rest of the list members under <code>nav:</code>.</p>
+</div>
+<p>To create a new sub-item in the nav bar on the left:</p>
+<ol>
+<li>First, locate which item the sub-item should live over (e.g. <code>Website</code>). </li>
+<li>Then, find the sub-directory which the existing sub-items exist (e.g. <code>docs/website</code>). Or, if a sub-directory doesn't exist, then create one.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>by convention, a sub-items of the <code>X</code> item in the nav bar will live in the sub-directory <code>docs/X</code></p>
+</div>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;3. Then, create a new markdown document in that sub-directory (e.g. <code>docs/website/new_subitem_page.md</code>)</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;4. Finally, in <code>mkdocs.yml</code> under the list item in <code>nav:</code> which corresponds to the item which your sub-item lives in, add a key value pair which corresponds to the new sub-item you're creating (e.g.       <code>Data Viz: website/data-viz.md</code>)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>the key which you add this under will be the displayed name for the nav bar sub-item, and the value should be the path to the sub-item's markdown document with the <code>docs</code> prefix removed. </p>
+</div>
                 
               
               

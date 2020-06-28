@@ -1,0 +1,794 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.6">
+    
+    
+      
+        <title>Backend - The Stanford Daily Developer Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b9ffd7b.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.b79bcd20.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=-apple-system,+system-ui,+BlinkMacSystemFont,+'Segoe+UI',+Roboto,+'Helvetica+Neue',+Ubuntu,+Arial,+sans-serif:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"-apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../main.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="blue-grey">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#responding-to-frontend-fetching-search-results" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="The Stanford Daily Developer Documentation" class="md-header-nav__button md-logo" aria-label="The Stanford Daily Developer Documentation">
+      
+  <img src="../../img/DailyIcon.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            The Stanford Daily Developer Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Backend
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/TheStanfordDaily/docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TheStanfordDaily/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="The Stanford Daily Developer Documentation" class="md-nav__button md-logo" aria-label="The Stanford Daily Developer Documentation">
+      
+  <img src="../../img/DailyIcon.png" alt="logo">
+
+    </a>
+    The Stanford Daily Developer Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/TheStanfordDaily/docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    TheStanfordDaily/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Website
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Website" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Website
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../website/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../website/frontend/" title="Frontend" class="md-nav__link">
+      Frontend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../website/backend/" title="Backend" class="md-nav__link">
+      Backend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../website/data-viz/" title="Data Viz" class="md-nav__link">
+      Data Viz
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      DevOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="DevOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../devops/dns/" title="DNS" class="md-nav__link">
+      DNS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../devops/aws-inventory/" title="AWS Inventory" class="md-nav__link">
+      AWS Inventory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../devops/domain-inventory/" title="Domain Inventory" class="md-nav__link">
+      Domain Inventory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../devops/account-inventory/" title="Account Inventory" class="md-nav__link">
+      Account Inventory
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Mobile App
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Mobile App" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Mobile App
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mobile-app/overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Archives
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Archives" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Archives
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../overview/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../frontend/" title="Frontend" class="md-nav__link">
+      Frontend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Backend
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Backend" class="md-nav__link md-nav__link--active">
+      Backend
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#responding-to-frontend-fetching-search-results" class="md-nav__link">
+    Responding to frontend fetching search results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responding-to-frontend-fetching-article-text" class="md-nav__link">
+    Responding to frontend fetching article text
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responding-to-frontend-fetching-issue-images" class="md-nav__link">
+    Responding to frontend fetching issue images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responding-to-frontend-submitting-corrections-to-articles" class="md-nav__link">
+    Responding to frontend submitting corrections to articles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudsearch" class="md-nav__link">
+    CloudSearch
+  </a>
+  
+    <nav class="md-nav" aria-label="CloudSearch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#searching" class="md-nav__link">
+    Searching
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-data" class="md-nav__link">
+    Uploading data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-gateway" class="md-nav__link">
+    API Gateway
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-processing" class="md-nav__link">
+    Pre-processing
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#responding-to-frontend-fetching-search-results" class="md-nav__link">
+    Responding to frontend fetching search results
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responding-to-frontend-fetching-article-text" class="md-nav__link">
+    Responding to frontend fetching article text
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responding-to-frontend-fetching-issue-images" class="md-nav__link">
+    Responding to frontend fetching issue images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responding-to-frontend-submitting-corrections-to-articles" class="md-nav__link">
+    Responding to frontend submitting corrections to articles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudsearch" class="md-nav__link">
+    CloudSearch
+  </a>
+  
+    <nav class="md-nav" aria-label="CloudSearch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#searching" class="md-nav__link">
+    Searching
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-data" class="md-nav__link">
+    Uploading data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-gateway" class="md-nav__link">
+    API Gateway
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-processing" class="md-nav__link">
+    Pre-processing
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/TheStanfordDaily/docs/edit/master/docs/archives/backend.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                  <h1>Backend</h1>
+                
+                <p>Several things power archives on the backend, and they're each located in different spots.</p>
+<p>These things include:
+- responding to frontend fetching search results
+- responding to frontend fetching article text
+- responding to frontend fetching issue images
+- responding to frontend submitting corrections to articles</p>
+<h2 id="responding-to-frontend-fetching-search-results">Responding to frontend fetching search results<a class="headerlink" href="#responding-to-frontend-fetching-search-results" title="Permanent link">&para;</a></h2>
+<p>When the frontend makes a search request, they are directly interacting with an aws API Gateway. Read more about API Gateways below. The API Gateway then routes the frontend's request to the CloudSearch endpoint, at which point the server backing the CloudSearch endpoint will process the search query and then respond to API Gateway with the results. API Gateway then forwards this back to the frontend. You can read more about CloudSearch below.</p>
+<h2 id="responding-to-frontend-fetching-article-text">Responding to frontend fetching article text<a class="headerlink" href="#responding-to-frontend-fetching-article-text" title="Permanent link">&para;</a></h2>
+<p>The canonical source (i.e. "source of truth") for archives article text is the <code>archives-text</code> github repo which can be found <a href="https://github.com/thestanforddaily/archives-text">here</a>. This is a massive repo (~10GB of data) and since Git doesn't scale well, it's a pain to work with. So if you ever need to work with it (which is likely as the articles text still have quite a few errors), just know that git actions like <code>git status</code> will take a very long time (I wouldn't be surprised if it took an hour to <code>git add</code> or <code>git commit</code>). Also don't use <code>zsh</code> when browsing this repo on your local machine because <code>zsh</code> doesn't scale well with large directories. </p>
+<p>When fetching article text on the frontend (e.g. when you go to an article and see the corresponding text to that article in the side bar), this text comes from the archives-text repository. The backend is really all handled by github and their API. The only thing that concerns us here is ensuring that this repo's data is up to date.</p>
+<h2 id="responding-to-frontend-fetching-issue-images">Responding to frontend fetching issue images<a class="headerlink" href="#responding-to-frontend-fetching-issue-images" title="Permanent link">&para;</a></h2>
+<p>Issue images are fetched on the frontend by OpenSeadragon. OpenSeadragon fetches tiled images that come from a CloudFront distribution; this distribution serves images from the stanforddailyarchive-tiled S3 bucket.</p>
+<p>The original (non-tiled) images of article pages, PDFs of issues, as well as the original METS / ALTO files (with transcriptions), can be found on the stanforddailyarchive S3 bucket.</p>
+<h2 id="responding-to-frontend-submitting-corrections-to-articles">Responding to frontend submitting corrections to articles<a class="headerlink" href="#responding-to-frontend-submitting-corrections-to-articles" title="Permanent link">&para;</a></h2>
+<p>The frontend corrections form is powered by google forms. We're using an embedded form. Checkout <a href="https://trevorfox.com/2015/06/dynamically-pre-fill-google-forms-with-mailchimp-merge-tags/">this</a> for more details. You can see the google form <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8BdqmWzBnOTVg9AS_diCDUbLO-JB3T_BJHo72PzwQGZo5oQ/viewform?embedded=false">here</a></p>
+<h2 id="cloudsearch">CloudSearch<a class="headerlink" href="#cloudsearch" title="Permanent link">&para;</a></h2>
+<p>CloudSearch is a search engine service by AWS which powers the archives search functionality. CloudSearch is powered by Apache Solr. </p>
+<p>To "see" CloudSearch, go to <code>aws.amazon.com</code> and sign in. Then, in the find services search bar, search for CloudSearch. Once there, there should be a <code>archives-text-CloudSearch</code> domain. If you click on it, you can interact with the CloudSearch through aws's interface. Here you can search the data set as well as configure the data set and Cloudsearch Instance. This is the best place in my opinion to configure the Cloudsearch Instance. Note that you don't need to use AWS's own interface to do these things. Amazon provides APIs which we can do these things programmatically. </p>
+<p>Here are some images which are more descriptive. </p>
+<ol>
+<li>Open <a href="http://console.aws.amazon.com/">AWS console</a> and find CloudSearch
+   <img alt="AWS console find cloudsearch" src="../img/aws_console_find_cloudsearch.png" /></li>
+<li>Cloudsearch Dashboard (clicking on the CloudSearch search suggestion in previous image brings us here)
+    <img alt="Cloudsearch Dashboard" src="../img/cloudsearch_dashboard.png" /></li>
+<li>Archives Text Cloudsearch Dashboard (clicking on "archives-text-cloudsearch" in previous image brings us here)
+    <img alt="Archives Text Cloudsearch Dashboard" src="../img/archives_text_cloudsearch_dashboard.png" /></li>
+<li>Archives Text Cloudsearch Test Search Dashboard (clicking on "Run a Test Search" in the side bar of previous image brings us here)
+   <img alt="Archives Text Cloudsearch Dashboard Test Search" src="../img/archives_text_cloudsearch_dashboard_test_search.png" /></li>
+</ol>
+<p>As previously discussed, the archives-text repo is the canonical source of archives-text information. However, it is not the only source where archives-text information is stored. The other place that article text is stored is in CloudSearch. In CloudSearch, there is an article-text field. All of this data should be the same as the archives-text repo. But be careful, because the two sources of data are in no way synced. If you change data in one place, be sure to change it in another. Typically the workflow is: make changes to the archives-text repo, then run the data upload scripts described below to sync data to CloudSearch. This isn't ideal. Perhaps it can be done automatically. Another idea would to have just a single source of article-text data. </p>
+<p>We interact with CloudSearch programmatically in two ways:</p>
+<ul>
+<li>Searching</li>
+<li>Uploading Data</li>
+</ul>
+<h3 id="searching">Searching<a class="headerlink" href="#searching" title="Permanent link">&para;</a></h3>
+<p>Searching is pretty simple. You just submit a query to an endpoint in the form of a http request and the endpoint responds with the search results. </p>
+<h3 id="uploading-data">Uploading data<a class="headerlink" href="#uploading-data" title="Permanent link">&para;</a></h3>
+<p>We have around 10GB of article text data in the archives-text repository and we need to upload that data to CloudSearch so that it has the data which we are searching over. There are python scripts which upload this data to CloudSearch in the archives-scripts repository. You can find them <a href="https://github.com/thestanforddaily/archives-scripts">here</a> and <a href="https://github.com/TheStanfordDaily/archives-scripts/tree/master/CloudSearch">here</a>. These two sources have a bit more documentation about CloudSearch, so go there to find out more.</p>
+<h2 id="api-gateway">API Gateway<a class="headerlink" href="#api-gateway" title="Permanent link">&para;</a></h2>
+<p>Unfortunately, CloudSearch doesn't allow cross origin requests to its endpoint. What this means is that we can't directly query the CloudSearch endpoint from the archives frontend. As a result, we need to setup an AWS API gateway for the CloudSearch endpoint. An API Gateway is essentially an endpoint which "wraps" around our CloudSearch endpoint. It offers several functions: you can "pre-process" and validate requests to CloudSearch and you can "post-process" requests to CloudSearch. AWS <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html">has a lot more doc</a> for API Gateway. </p>
+<p>To access API Gateway, go to the AWS Console and search for "API Gateway." Then, there should be a gateway called <code>archives-CloudSearch-search-api</code>. Click on this. Then, click on the Get Method. You should see a flow chart with a test item, method request, integration request etc. If you click on method request and expand url query string parameter, you'll see a lot of the query string parameters which correspond to CloudSearch queries. The way gateway works is we need to explicitly tell the gateway which url queries are permitted to pass through the gateway. Once you add a parameter here, you need to go to integration request and add the same query string parameter to url query string parameters there. Name field should be the same as the query parameter, and mapped from should be whatever query parameter we're mapping from in the method request section. </p>
+<p>After you've made changes, you can test them in the test section. Then if you're satisfied, you need to deploy them to have the actually take effect. To do this, do to the actions dropdown and select deploy api, then select deployment stage (may need to create a new one) and click deploy. Now, the changes should take effect, and we can access the API gateway properly on the frontend. </p>
+<h2 id="pre-processing">Pre-processing<a class="headerlink" href="#pre-processing" title="Permanent link">&para;</a></h2>
+<p>A lot of data has been pre-processed in order to make the archives work:</p>
+<ul>
+<li>Images from the stanforddailyarchive S3 bucket have been tiled to multiple sizes in the <a href="https://iiif.io/">IIIF format</a> and uploaded to the stanforddailyarchive-tiled S3 bucket. The script used for tiling is <a href="https://github.com/TheStanfordDaily/archives-scripts/blob/master/resize.js">archives-scripts/resize.js</a>.</li>
+<li>All images from the stanforddailyarchive have been catalogued to generate the <code>metadata.json</code> file on the stanforddailyarchive bucket. This file is used to generate the calendar view on the archives web UI. The script used to generate this metadata is at <a href="https://github.com/TheStanfordDaily/archives-scripts/blob/master/list_metadata.js">archives-scripts/list_metadata.js</a>.</li>
+<li>Text has been extracted from METS / ALTO files on the stanforddailyarchive bucket into the <a href="https://github.com/TheStanfordDaily/archives-text">archives-text</a> github repo. The script used to do this is <a href="https://github.com/TheStanfordDaily/archives-scripts/blob/master/extract-text.js">archives-scripts/extract-text.js</a> (it was run on <a href="https://web.stanford.edu/group/farmshare/cgi-bin/wiki/index.php/FarmShare_2">FarmShare</a> using <a href="https://github.com/TheStanfordDaily/archives-scripts/blob/master/slurm-script.sh">archives-scripts/slurm-script.sh</a>)</li>
+<li>Our old archives site, which was hosted by Veridian, allowed people to make corrections to archives text. Corrections files from Veridian have been applied on the archives-text github repo using this script: <a href="https://github.com/TheStanfordDaily/archives-scripts/blob/master/corrections.py">archives-scripts/corrections.py</a>.</li>
+<li>The process for extracting article text into the archives-text repo was buggy and ended up creating many articles with repeated text (text would repeat maybe 5-10+ times on a single file). These repeats were fixed by running this script: <a href="https://github.com/TheStanfordDaily/archives-scripts/blob/master/fix-repeats.py">archives-scripts/fix-repeats.py</a>.</li>
+<li>The scripts for uploading article text from archives-text to CloudSearch are found in the <a href="https://github.com/TheStanfordDaily/archives-scripts/tree/master/cloudsearch">archives-scripts/cloudsearch</a> directory.</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../frontend/" title="Frontend" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Frontend
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.a0c4167b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.37585f48.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
