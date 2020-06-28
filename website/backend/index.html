@@ -373,6 +373,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    Debug
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -678,6 +685,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    Debug
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -804,6 +818,14 @@ git push git@git.wpengine.com:production/stanforddaily2.git master
 <p>Set the <code>WPENGINE_SSH_PRIVATE_KEY</code> secret to be equal to the value of the generated private key.</p>
 <h3 id="future-improvements">Future improvements<a class="headerlink" href="#future-improvements" title="Permanent link">&para;</a></h3>
 <p>We should add more tests, especially to the <code>tsd-json</code> plugin.</p>
+<h2 id="debug">Debug<a class="headerlink" href="#debug" title="Permanent link">&para;</a></h2>
+<p>To debug, here are some useful links:</p>
+<ul>
+<li><a href="https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/$252Faws$252Flambda$252Fus-east-1.c2m3cl8-6zgnou9">Lambda@edge function production logs</a>. You can search "error" in all log groups to get all logs that involve website errors.<ul>
+<li>We should set up a Slack notification service that automatically sends error logs from this lambda function into a Slack channel that tech team can monitor.</li>
+</ul>
+</li>
+</ul>
                 
               
               
