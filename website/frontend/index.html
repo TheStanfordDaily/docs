@@ -808,7 +808,7 @@ yarn start
 <h3 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h3>
 <p>We deploy using the Serverless Framework. This creates an S3 bucket with static pages and a Lambda@edge function that runs the Next.js server-side rendering code. Both the S3 bucket and the Lambda@edge function are connected to a Cloudfront distribution which actually serves our content.</p>
 <p>The current CloudFront distribution for <a href="https://www.stanforddaily.com">https://www.stanforddaily.com</a> is at <a href="https://d3uak7r5z7qp0p.cloudfront.net/">https://d3uak7r5z7qp0p.cloudfront.net/</a>.</p>
-<p>Finally, stanforddaily.com has DNS records (stored in both Ezoic and CloudFlare) that point to this cloudfront distribution (a CNAME record to d3uak7r5z7qp0p.cloudfront.net).</p>
+<p>Finally, stanforddaily.com has DNS records (stored in both Ezoic and Cloudflare) that point to this cloudfront distribution (a CNAME record to d3uak7r5z7qp0p.cloudfront.net).</p>
 <p>You can view all CloudFront distributions at <a href="https://console.aws.amazon.com/cloudfront/home">https://console.aws.amazon.com/cloudfront/home</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
