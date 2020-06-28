@@ -32,7 +32,7 @@ The front end is built using several technologies:
 ## Gotchas
 
  - `moment` is used to calculate strings for dates throughout the frontend. However, `moment` is too "smart" in that it by default factors in different time zones. As a result, you may encounter the situation where a date is correct when developing on your local machine, but then when you deploy, the date is incorrect in production. This is likely due to `moment`/timezones. To fix this, use `moment.utc` to convert all `moment`s to the same time zone.
-   - You can find an example of this [on line 424 here](https://github.com/TheStanfordDaily/archives-web/blob/d317d8d347dd04099ba5620d0333c8e0da12064d/components/PaperView.jsx)
+   - You can find an example of this [here](https://github.com/TheStanfordDaily/archives-web/blob/d317d8d347dd04099ba5620d0333c8e0da12064d/components/PaperView.jsx#L424)
   
 
 ## Backend interactions

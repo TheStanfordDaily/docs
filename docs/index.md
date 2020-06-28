@@ -14,7 +14,7 @@ Open up [http://localhost:8000](http://localhost:8000) in your browser.
 ## Editing the docs
 To create a new item in the nav bar on the left: 
 
-1. Open `mkdocks.yml`
+1. Open `mkdocs.yml`
 2. Add  list member `- [title of nav bar item]:` under key `nav:`.
    
 !!! note
@@ -32,7 +32,7 @@ To create a new sub-item in the nav bar on the left:
 
 &nbsp;&nbsp;&nbsp;&nbsp;3\. Then, create a new markdown document in that sub-directory (e.g. `docs/website/new_subitem_page.md`)
 
-&nbsp;&nbsp;&nbsp;&nbsp;4\. Finally, in `mkdocks.yml` under the list item in `nav:` which corresponds to the item which your sub-item lives in, add a key value pair which corresponds to the new sub-item you're creating (e.g.       `Data Viz: website/data-viz.md`)
+&nbsp;&nbsp;&nbsp;&nbsp;4\. Finally, in `mkdocs.yml` under the list item in `nav:` which corresponds to the item which your sub-item lives in, add a key value pair which corresponds to the new sub-item you're creating (e.g.       `Data Viz: website/data-viz.md`)
 
 !!! note
       the key which you add this under will be the displayed name for the nav bar sub-item, and the value should be the path to the sub-item's markdown document with the `docs` prefix removed. 
