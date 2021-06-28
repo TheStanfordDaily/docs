@@ -56,16 +56,28 @@ The block should have the following code to render an iframe (replace the `src` 
 
 You can tweak the `min-height: 100vh;` value as needed, if you want the height to be different.
 
-### Hiding the header
+### Hiding the header, other styling customizations
 
 If you want to hide the title / header image of the article, also add a HTML block with the following content:
 
 ```html
 <style>
+.tsd-article header { display: none; }
+</style>
+```
+
+To hide *only* the featured image (but not the title), use:
+
+```html
+<style>.tsd-article header figure { display: none; }</style>
+```
+
+To make the entire body of the article full width (this is useful if you want your visualization to fill the entire width):
+
+```html
 #main-article-text2 {
 margin: 0 !important; width: 100% !important;
-} .tsd-article header { display: none; }
-</style>
+}
 ```
 
 In fact, you can add a `<style>` block with any custom CSS you want if you need further customization of the article page.

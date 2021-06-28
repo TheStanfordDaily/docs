@@ -1,4 +1,4 @@
-Our DNS records are handled both in Ezoic and Cloudflare. Essentially, we actually use Cloudflare DNS servers, but Ezoic is synced to Cloudflare, meaning that every few hours, it overwrites the records stored at Cloudflare with what
+Our DNS records are handled both in Ezoic and Cloudflare. Essentially, we actually use Cloudflare DNS servers, but Ezoic is synced to Cloudflare, meaning that every few hours, it overwrites the records stored at Cloudflare with what was configured on Ezoic's end.
 
 ## Adding a new record
 
